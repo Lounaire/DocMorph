@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocMorph — Рабочая область</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="workspace-page">
+    <header class="workspace-header">
+        <a href="/" class="back-link">DocMorph</a>
+        <div class="sidebar-controls">
+            <button id="toggle-left-sidebar" type="button">Настройки</button>
+            <button id="toggle-right-sidebar" type="button">Шаблоны</button>
+        </div>
+    </header>
+
+    <main class="workspace-layout">
+        <aside id="left-sidebar" class="sidebar left-sidebar is-open">
+            <h2>Ручные настройки</h2>
+            <p>Здесь будут стили, шрифты, отступы, размеры текста и другие параметры.</p>
+        </aside>
+
+        <section class="editor-preview">
+            <div class="panel editor-panel">
+                <h2>Markdown</h2>
+                <textarea id="markdown-input" class="markdown-input" placeholder="# Напишите ваш markdown здесь..."># Пример заголовка
+
+Тут будет ваш markdown-текст.</textarea>
+            </div>
+
+            <div class="panel preview-panel">
+                <h2>Предпросмотр</h2>
+                <div id="preview-output" class="preview-output"></div>
+                <!-- Сейчас предпросмотр рендерится как HTML. Для PDF замените этот блок на embed/iframe с PDF blob URL или URL файла PDF. -->
+            </div>
+        </section>
+
+        <aside id="right-sidebar" class="sidebar right-sidebar">
+            <h2>Галерея шаблонов</h2>
+            <p>Здесь будет список готовых шаблонов стилей.</p>
+        </aside>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

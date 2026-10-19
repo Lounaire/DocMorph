@@ -13,4 +13,10 @@ templates = Jinja2Templates(directory="templates")
 # Main Page
 @app.get("/", response_class=HTMLResponse)
 def index(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse(request=request, name="index.html")
+
+
+@app.get("/workspace", response_class=HTMLResponse)
+def workspace(request: Request):
+    return templates.TemplateResponse(request=request, name="workspace.html")
+
